@@ -5,55 +5,67 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>websiteku</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-
 <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
 <header class="navbar">
-    <div class="logo">
-        websiteku
-    </div>
 
-    <div class="search-box">
-        <input
-            type="text"
-            id="searchInput"
-            placeholder="Cari video..."
-        >
-    </div>
+<div class="logo">
+▶ websiteku
+</div>
+
+<div class="search">
+<input type="text" placeholder="Cari video...">
+</div>
+
 </header>
 
-<main>
+<div class="container">
 
-<section class="hero">
+<div class="pagination">
+<button>1</button>
+<button>2</button>
+<button class="active">3</button>
+<button>4</button>
+<button>5</button>
 
-<div class="video-card" data-title="Video Viral Terbaru">
+<button class="next-btn">
+▶ Next Video
+</button>
+</div>
 
-<video
-id="mainVideo"
-controls
-preload="metadata"
-poster="https://dummyimage.com/800x450/111827/ffffff&text=Websiteku"
->
+<h2 class="section-title">
+🔥 Video Viral Terbaru
+</h2>
+
+<div class="video-card">
+
+<video controls preload="metadata">
 <source src="https://cdn2.sliwtdrive.com/BIYDvcux1.mp4" type="video/mp4">
 </video>
 
-<div class="btn-group">
-<button onclick="downloadVideo()">Download Video</button>
-<button onclick="playAgain()">Putar Ulang</button>
-</div>
+<div class="action-buttons">
+
+<button class="download-btn">
+⬇ Download Video
+</button>
+
+<button class="next-video-btn">
+▶ Video Berikutnya
+</button>
 
 </div>
 
-</section>
+</div>
 
-</main>
+<div class="banner">
+<img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=1000"
+alt="banner">
+</div>
 
-<script src="script.js"></script>
+</div>
 
 </body>
 </html>
