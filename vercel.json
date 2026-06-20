@@ -1,8 +1,13 @@
 {
-  "functions": {
-    "api/*.js": {
-      "memory": 512,
-      "maxDuration": 10
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=86400, s-maxage=86400, stale-while-revalidate=604800"
+        }
+      ]
     }
-  }
+  ]
 }
