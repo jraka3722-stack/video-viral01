@@ -3,104 +3,53 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>websiteku</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
-
 </head>
+
 <body>
 
 <header class="navbar">
+    <div class="logo">
+        websiteku
+    </div>
 
-<div class="logo">
-▶ websiteku
-</div>
-
-<div class="search-box">
-<input
-type="text"
-id="searchInput"
-placeholder="Cari video..."
->
-</div>
-
+    <div class="search-box">
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="Cari video..."
+        >
+    </div>
 </header>
 
-<main class="container">
+<main>
 
-<div class="pagination">
-
-<button>1</button>
-<button>2</button>
-<button class="active">3</button>
-<button>4</button>
-<button>5</button>
-
-<a
-class="next-page"
-href="https://cdn2.sliwtdrive.com/BIYDvcux1.mp4"
-target="_blank"
->
-▶ Next Video
-</a>
-
-</div>
-
-<h2 class="title">
-🔥 Video Viral Terbaru
-</h2>
+<section class="hero">
 
 <div class="video-card" data-title="Video Viral Terbaru">
 
-<a
-href="https://cdn2.sliwtdrive.com/BIYDvcux1.mp4"
-target="_blank"
+<video
+id="mainVideo"
+controls
+preload="metadata"
+poster="https://dummyimage.com/800x450/111827/ffffff&text=Websiteku"
 >
+<source src="https://cdn2.sliwtdrive.com/BIYDvcux1.mp4" type="video/mp4">
+</video>
 
-<img
-class="video-thumb"
-src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=1200"
-alt="thumbnail video"
->
-
-</a>
-
-<div class="buttons">
-
-<a
-class="download-btn"
-href="https://cdn2.sliwtdrive.com/BIYDvcux1.mp4"
-target="_blank"
->
-⬇ Download Video
-</a>
-
-<a
-class="next-btn"
-href="https://cdn2.sliwtdrive.com/BIYDvcux1.mp4"
-target="_blank"
->
-▶ Video Berikutnya
-</a>
-
+<div class="btn-group">
+<button onclick="downloadVideo()">Download Video</button>
+<button onclick="playAgain()">Putar Ulang</button>
 </div>
 
 </div>
 
-<div class="banner">
-
-<img
-src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=1200"
-alt="banner"
->
-
-</div>
+</section>
 
 </main>
 
