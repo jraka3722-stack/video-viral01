@@ -7,8 +7,7 @@ font-family:'Poppins',sans-serif;
 
 body{
 background:#050816;
-color:white;
-min-height:100vh;
+color:#fff;
 }
 
 .navbar{
@@ -18,93 +17,134 @@ z-index:999;
 display:flex;
 justify-content:space-between;
 align-items:center;
-padding:15px 20px;
-background:rgba(5,8,22,.95);
-backdrop-filter:blur(12px);
+padding:15px;
+background:#09101d;
 border-bottom:1px solid rgba(255,255,255,.08);
 }
 
 .logo{
 font-size:28px;
 font-weight:700;
-background:linear-gradient(90deg,#ff4d4d,#ff7b54);
--webkit-background-clip:text;
--webkit-text-fill-color:transparent;
-letter-spacing:1px;
-}
-
-.search-box{
-width:220px;
-}
-
-.search-box input{
-width:100%;
-padding:12px;
-border:none;
-outline:none;
-border-radius:14px;
-background:#111827;
 color:white;
 }
 
-.hero{
-padding:20px;
+.search input{
+padding:10px 15px;
+border:none;
+border-radius:12px;
+background:#111827;
+color:white;
+outline:none;
+}
+
+.container{
 max-width:900px;
 margin:auto;
+padding:20px;
+}
+
+.pagination{
+display:flex;
+gap:10px;
+margin-bottom:25px;
+flex-wrap:wrap;
+}
+
+.pagination button{
+width:55px;
+height:55px;
+border:none;
+border-radius:14px;
+background:#111827;
+color:white;
+font-size:18px;
+cursor:pointer;
+}
+
+.pagination .active{
+background:#ff5c5c;
+}
+
+.next-btn{
+width:auto !important;
+padding:0 25px;
+background:#ff5c5c !important;
+}
+
+.section-title{
+font-size:32px;
+margin-bottom:20px;
 }
 
 .video-card{
 background:#0c1020;
-border-radius:20px;
-padding:18px;
-box-shadow:0 0 30px rgba(255,80,80,.15);
+padding:15px;
+border-radius:25px;
 }
 
-video{
+.video-card video{
 width:100%;
-border-radius:16px;
+border-radius:20px;
 background:black;
 }
 
-.btn-group{
+.action-buttons{
 display:flex;
 gap:15px;
 margin-top:15px;
 }
 
-.btn-group button{
+.download-btn,
+.next-video-btn{
 flex:1;
-padding:14px;
+padding:18px;
 border:none;
-border-radius:14px;
-cursor:pointer;
-font-size:15px;
+border-radius:16px;
+font-size:18px;
 font-weight:600;
+cursor:pointer;
+}
+
+.download-btn{
+background:#ff5c5c;
 color:white;
-background:linear-gradient(90deg,#ff4d4d,#ff7b54);
 }
 
-.btn-group button:hover{
-opacity:.9;
+.next-video-btn{
+background:#13192f;
+color:white;
 }
 
-@media(max-width:600px){
-
-.navbar{
-flex-direction:column;
-gap:12px;
+.banner{
+margin-top:25px;
 }
 
-.search-box{
+.banner img{
 width:100%;
+border-radius:20px;
+display:block;
 }
+
+@media(max-width:768px){
 
 .logo{
+font-size:22px;
+}
+
+.section-title{
 font-size:24px;
 }
 
-.btn-group{
+.action-buttons{
 flex-direction:column;
+}
+
+.search{
+width:150px;
+}
+
+.search input{
+width:100%;
 }
 
 }
