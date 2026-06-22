@@ -1,152 +1,44 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>websiteku</title>
+<meta name="viewport"
+content="width=device-width,initial-scale=1.0">
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<title>Video Viral</title>
 
 <link rel="stylesheet" href="style.css">
 
-<link rel="preload" as="image" href="thumbnail.webp">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
-<header class="navbar">
+<header>
 
 <div class="logo">
 
-<div class="playicon">▶</div>
-
-<div class="logotext">
-websiteku
-</div>
+Video Viral
 
 </div>
-
-<div class="search">
 
 <input
-id="searchInput"
+id="search"
 type="text"
-placeholder="Cari video..."
->
-
-</div>
+placeholder="Search video...">
 
 </header>
 
-<main class="container">
-
-<section>
-
-<h1 class="title">
-
-🔥 Video Viral Terbaru
-
-</h1>
-
-<div class="card">
-
-<a
-href="https://cdn2.sliwtdrive.com/BIYDvcux1.mp4"
-target="_blank"
-class="video-link"
->
-
-<img
-
-src="thumbnail.webp"
-
-loading="eager"
-
-fetchpriority="high"
-
-decoding="async"
-
-class="thumbnail"
-
-alt="Thumbnail Video"
-
->
-
-<div class="playbutton">
-
-▶
-
-</div>
-
-</a>
-
-<div class="buttons">
-
-<a
-
-href="https://cdn2.sliwtdrive.com/BIYDvcux1.mp4"
-
-download
-
-class="download"
-
->
-
-⬇ Download Video
-
-</a>
-
-<button
-
-class="next"
-
-onclick="nextVideo()"
-
->
-
-▶ Video Berikutnya
-
-</button>
-
-</div>
-
-</div>
-
-<a
-
-href="https://t.me/semuasuka001"
-
-target="_blank"
-
-class="telegram"
-
->
-
-<img
-
-src="banner-telegram.webp"
-
-loading="lazy"
-
-decoding="async"
-
-alt="Telegram"
-
->
-
-</a>
-
-</section>
+<main id="videoList">
 
 </main>
 
 <script src="script.js"></script>
 
 </body>
+
 </html>
