@@ -1,74 +1,75 @@
-// ==============================
-// SEARCH VIDEO
-// ==============================
+const videos=[
 
-const searchInput = document.getElementById("searchInput");
+{
 
-if (searchInput) {
+title:"Video Viral 1",
 
-    searchInput.addEventListener("input", function () {
+url:"https://cdn2.slicidrive.de/tOfX2P7.mp4"
 
-        const keyword = this.value.toLowerCase().trim();
+},
 
-        const card = document.querySelector(".card");
+{
 
-        const title = "video viral terbaru";
+title:"Video Viral 2",
 
-        if (keyword === "" || title.includes(keyword)) {
-
-            card.style.display = "block";
-
-        } else {
-
-            card.style.display = "none";
-
-        }
-
-    });
+url:"https://cdn2.sliwtdrive.com/BIYDvcux1.mp4"
 
 }
 
-// ==============================
-// NEXT VIDEO
-// ==============================
+];
 
-function nextVideo() {
+const container=document.getElementById("videoList");
 
-    window.open(
-        "https://cdn2.sliwtdrive.com/BIYDvcux1.mp4",
-        "_blank"
-    );
+function tampil(data){
+
+container.innerHTML="";
+
+data.forEach(item=>{
+
+container.innerHTML+=`
+
+<div class="card">
+
+<video
+
+controls
+
+preload="metadata"
+
+loading="lazy"
+
+poster="https://picsum.photos/500/800?random=${Math.random()}">
+
+<source src="${item.url}" type="video/mp4">
+
+</video>
+
+<div class="title">
+
+${item.title}
+
+</div>
+
+</div>
+
+`;
+
+});
 
 }
 
-// ==============================
-// PRELOAD IMAGE
-// ==============================
+tampil(videos);
 
-window.addEventListener("load", () => {
+document.getElementById("search").addEventListener("keyup",(e)=>{
 
-    const thumbnail = new Image();
+const keyword=e.target.value.toLowerCase();
 
-    thumbnail.src = "thumbnail.webp";
+const hasil=videos.filter(v=>
 
-});
+v.title.toLowerCase().includes(keyword)
 
-// ==============================
-// SMOOTH LOAD
-// ==============================
+);
 
-document.querySelectorAll("img").forEach((img) => {
-
-    img.setAttribute("decoding", "async");
-
-});
-
-// ==============================
-// DISABLE RIGHT CLICK (OPSIONAL)
-// ==============================
-
-document.addEventListener("contextmenu", (e) => {
-
-    e.preventDefault();
+tampil(hasil);
 
 });
