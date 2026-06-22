@@ -1,12 +1,19 @@
-# websiteku
+# Video Viral
 
 Website streaming video sederhana.
 
-Fitur:
+## Fitur
 
-- Navbar aesthetic
-- Sticky Search Bar
-- Responsive Mobile
-- Cache Vercel
-- Streaming MP4
-- Download Video
+- 1 Grid Full Width
+- Sticky Search
+- Responsive Android
+- Lazy Loading
+- Browser Cache
+- Github Ready
+- Vercel Ready
+
+## Deploy
+
+Upload semua file ke Github lalu Import Repository ke Vercel.
+
+Selesai.
