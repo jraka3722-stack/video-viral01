@@ -1,28 +1,27 @@
-const searchInput = document.getElementById("searchInput");
-const videoCard = document.querySelector(".video-card");
+const input = document.querySelector("input");
 
-searchInput.addEventListener("keyup", () => {
+input.addEventListener("keyup",function(){
 
-const keyword = searchInput.value.toLowerCase();
-const title = videoCard.dataset.title.toLowerCase();
+const keyword=this.value.toLowerCase();
 
-if(title.includes(keyword)){
-videoCard.style.display = "block";
+const card=document.querySelector(".card");
+
+if(keyword===""){
+
+card.style.display="block";
+
+return;
+
+}
+
+if("video viral terbaru".includes(keyword)){
+
+card.style.display="block";
+
 }else{
-videoCard.style.display = "none";
+
+card.style.display="none";
+
 }
 
 });
-
-function downloadVideo(){
-window.open(
-"https://cdn2.sliwtdrive.com/BIYDvcux1.mp4",
-"_blank"
-);
-}
-
-function playAgain(){
-const video = document.getElementById("mainVideo");
-video.currentTime = 0;
-video.play();
-}
