@@ -1,27 +1,47 @@
-const input = document.querySelector("input");
+const searchInput = document.getElementById("searchInput");
 
-input.addEventListener("keyup",function(){
+const videoCard = document.querySelector(".video-card");
 
-const keyword=this.value.toLowerCase();
+searchInput.addEventListener("input", function () {
 
-const card=document.querySelector(".card");
+    const keyword = this.value.toLowerCase().trim();
 
-if(keyword===""){
+    const title = "video viral terbaru";
 
-card.style.display="block";
+    if (title.includes(keyword) || keyword === "") {
 
-return;
+        videoCard.style.display = "block";
 
-}
+    } else {
 
-if("video viral terbaru".includes(keyword)){
+        videoCard.style.display = "none";
 
-card.style.display="block";
+    }
 
-}else{
+});
 
-card.style.display="none";
+// Preload thumbnail agar lebih cepat
 
-}
+window.addEventListener("load", () => {
+
+    const img = new Image();
+
+    img.src = "thumbnail.jpg";
+
+});
+
+// Lazy load banner telegram
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const banner = document.querySelector(".telegram-banner");
+
+    if (banner) {
+
+        banner.loading = "lazy";
+
+        banner.decoding = "async";
+
+    }
 
 });
