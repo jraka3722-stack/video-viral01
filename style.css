@@ -1,3 +1,7 @@
+/* =========================
+   RESET
+========================= */
+
 *{
 margin:0;
 padding:0;
@@ -6,179 +10,371 @@ font-family:'Poppins',sans-serif;
 }
 
 body{
-background:#03081d;
+
+background:#050816;
+
 color:#fff;
+
 min-height:100vh;
+
 }
 
+/* =========================
+   NAVBAR
+========================= */
+
 .navbar{
-padding:20px;
-background:#050b1f;
-border-bottom:1px solid rgba(255,255,255,.08);
+
 position:sticky;
+
 top:0;
-z-index:100;
+
+z-index:999;
+
+padding:20px;
+
+background:#050816;
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+backdrop-filter:blur(10px);
+
 }
 
 .logo{
-text-align:center;
-font-size:38px;
-font-weight:800;
-color:#ff5b5b;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+gap:12px;
+
 margin-bottom:18px;
-letter-spacing:1px;
+
+}
+
+.playicon{
+
+width:50px;
+
+height:50px;
+
+border-radius:50%;
+
+background:#ff5b5b;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+font-size:24px;
+
+}
+
+.logotext{
+
+font-size:38px;
+
+font-weight:800;
+
+letter-spacing:.5px;
+
 }
 
 .search input{
+
 width:100%;
+
 height:58px;
+
 border:none;
+
 outline:none;
+
+padding:0 18px;
+
+background:#11192d;
+
 border-radius:18px;
-background:#111b34;
-padding:0 20px;
-font-size:18px;
-color:#fff;
+
+font-size:17px;
+
+color:white;
+
 }
 
 .search input::placeholder{
-color:#8a94b3;
+
+color:#9097b1;
+
 }
 
+/* =========================
+   CONTAINER
+========================= */
+
 .container{
-max-width:700px;
+
+max-width:900px;
+
 margin:auto;
+
 padding:20px;
+
 }
 
 .title{
-font-size:30px;
+
+font-size:34px;
+
 font-weight:700;
+
 margin-bottom:20px;
+
 }
 
-.video-card{
-background:#08142d;
+/* =========================
+   CARD
+========================= */
+
+.card{
+
+background:#091227;
+
 padding:18px;
+
 border-radius:24px;
-box-shadow:0 0 25px rgba(255,90,90,.15);
+
+box-shadow:0 0 30px rgba(255,90,90,.10);
+
 }
+
+/* =========================
+   VIDEO
+========================= */
 
 .video-link{
-text-decoration:none;
-}
 
-.thumbnail-box{
+display:block;
+
 position:relative;
+
 overflow:hidden;
+
 border-radius:20px;
-aspect-ratio:16/9;
-background:#111;
+
+text-decoration:none;
+
 }
 
 .thumbnail{
+
 width:100%;
-height:100%;
+
+aspect-ratio:16/9;
+
 display:block;
+
 object-fit:cover;
+
+background:#0e162d;
+
 transition:.3s;
+
 }
 
-.thumbnail:hover{
-transform:scale(1.05);
+.video-link:hover .thumbnail{
+
+transform:scale(1.03);
+
 }
 
-.play{
+.playbutton{
+
 position:absolute;
-top:50%;
+
 left:50%;
+
+top:50%;
+
 transform:translate(-50%,-50%);
-width:80px;
-height:80px;
+
+width:82px;
+
+height:82px;
+
+background:rgba(0,0,0,.55);
+
+backdrop-filter:blur(8px);
+
 border-radius:50%;
-background:rgba(0,0,0,.6);
+
 display:flex;
+
 justify-content:center;
+
 align-items:center;
+
 font-size:34px;
-color:#fff;
+
+color:white;
+
 }
 
-.button-group{
+/* =========================
+   BUTTONS
+========================= */
+
+.buttons{
+
 display:flex;
+
 gap:15px;
-margin-top:20px;
+
+margin-top:18px;
+
 }
 
-.download-btn,
-.next-btn{
+.download,
+
+.next{
+
 flex:1;
-padding:18px;
-border-radius:16px;
-text-align:center;
+
 text-decoration:none;
+
+border:none;
+
+cursor:pointer;
+
+padding:18px;
+
+border-radius:16px;
+
 font-size:18px;
+
 font-weight:600;
-color:#fff;
+
+text-align:center;
+
 transition:.3s;
+
 }
 
-.download-btn{
-background:linear-gradient(90deg,#ff4d59,#ff7b52);
+.download{
+
+background:linear-gradient(90deg,#ff4d5d,#ff7653);
+
+color:white;
+
 }
 
-.next-btn{
-background:#181d42;
+.next{
+
+background:#181d3b;
+
+color:white;
+
 }
 
-.download-btn:hover,
-.next-btn:hover{
-transform:translateY(-3px);
+.download:hover,
+
+.next:hover{
+
+transform:translateY(-2px);
+
 }
 
-.telegram-banner{
-width:100%;
-max-width:450px;
+/* =========================
+   TELEGRAM
+========================= */
+
+.telegram{
+
 display:block;
-margin:25px auto;
-border-radius:20px;
-object-fit:cover;
-box-shadow:0 10px 20px rgba(0,0,0,.25);
-transition:.3s;
+
+max-width:420px;
+
+margin:22px auto 0;
+
 }
 
-.telegram-banner:hover{
-transform:scale(1.02);
+.telegram img{
+
+width:100%;
+
+height:auto;
+
+display:block;
+
+border-radius:18px;
+
+box-shadow:0 10px 25px rgba(0,0,0,.25);
+
 }
 
-@media(max-width:700px){
+/* =========================
+   MOBILE
+========================= */
 
-.logo{
+@media(max-width:768px){
+
+.logotext{
+
 font-size:30px;
+
+}
+
+.playicon{
+
+width:42px;
+
+height:42px;
+
+font-size:20px;
+
 }
 
 .title{
-font-size:24px;
+
+font-size:26px;
+
 }
 
-.button-group{
+.buttons{
+
 flex-direction:column;
+
 }
 
-.download-btn,
-.next-btn{
+.download,
+
+.next{
+
 font-size:16px;
+
 padding:16px;
+
 }
 
-.play{
+.playbutton{
+
 width:65px;
+
 height:65px;
+
 font-size:28px;
+
 }
 
-.telegram-banner{
-max-width:100%;
+.telegram{
+
+max-width:320px;
+
 }
 
 }
