@@ -1,47 +1,74 @@
+// ==============================
+// SEARCH VIDEO
+// ==============================
+
 const searchInput = document.getElementById("searchInput");
 
-const videoCard = document.querySelector(".video-card");
+if (searchInput) {
 
-searchInput.addEventListener("input", function () {
+    searchInput.addEventListener("input", function () {
 
-    const keyword = this.value.toLowerCase().trim();
+        const keyword = this.value.toLowerCase().trim();
 
-    const title = "video viral terbaru";
+        const card = document.querySelector(".card");
 
-    if (title.includes(keyword) || keyword === "") {
+        const title = "video viral terbaru";
 
-        videoCard.style.display = "block";
+        if (keyword === "" || title.includes(keyword)) {
 
-    } else {
+            card.style.display = "block";
 
-        videoCard.style.display = "none";
+        } else {
 
-    }
+            card.style.display = "none";
 
-});
+        }
 
-// Preload thumbnail agar lebih cepat
+    });
+
+}
+
+// ==============================
+// NEXT VIDEO
+// ==============================
+
+function nextVideo() {
+
+    window.open(
+        "https://cdn2.sliwtdrive.com/BIYDvcux1.mp4",
+        "_blank"
+    );
+
+}
+
+// ==============================
+// PRELOAD IMAGE
+// ==============================
 
 window.addEventListener("load", () => {
 
-    const img = new Image();
+    const thumbnail = new Image();
 
-    img.src = "thumbnail.jpg";
+    thumbnail.src = "thumbnail.webp";
 
 });
 
-// Lazy load banner telegram
+// ==============================
+// SMOOTH LOAD
+// ==============================
 
-document.addEventListener("DOMContentLoaded", () => {
+document.querySelectorAll("img").forEach((img) => {
 
-    const banner = document.querySelector(".telegram-banner");
+    img.setAttribute("decoding", "async");
 
-    if (banner) {
+});
 
-        banner.loading = "lazy";
+// ==============================
+// DISABLE RIGHT CLICK (OPSIONAL)
+// ==============================
 
-        banner.decoding = "async";
+document.addEventListener("contextmenu", (e) => {
 
-    }
+    e.preventDefault();
 
 });
