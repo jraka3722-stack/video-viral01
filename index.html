@@ -3,13 +3,17 @@
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1">
 
 <title>websiteku</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<link rel="preload" href="thumbnail.jpg" as="image">
+<link rel="preload" href="benner-telegram.jpg" as="image">
 
 <link rel="stylesheet" href="style.css">
 
@@ -17,62 +21,69 @@
 
 <body>
 
-<header class="navbar">
+<header>
 
 <div class="logo">
+
 ▶ websiteku
+
 </div>
 
-<div class="search-box">
-<input
-type="text"
-id="searchInput"
-placeholder="Cari video...">
+<div class="search">
+
+<input type="text" placeholder="Cari video...">
+
 </div>
 
 </header>
 
 <main>
 
-<section class="hero">
+<h1>
 
-<h2 class="title">
 🔥 Video Viral Terbaru
-</h2>
 
-<div class="video-card" data-title="Video Viral Terbaru">
+</h1>
 
-<a
-href="https://cdn2.sliwtdrive.com/BIYDvcux1.mp4"
-target="_blank"
-class="video-link">
+<div class="card">
+
+<a href="https://cdn2.sliwtdrive.com/BIYDvcux1.mp4" target="_blank">
+
+<div class="image">
 
 <img
-class="thumbnail"
 src="thumbnail.jpg"
-alt="Thumbnail Video">
+alt="thumbnail"
+loading="eager"
+fetchpriority="high">
 
-<div class="play-button">
+<div class="play">
+
 ▶
+
+</div>
+
 </div>
 
 </a>
 
-<div class="btn-group">
+<div class="button-area">
 
-<a
+<a class="download"
+
 href="https://cdn2.sliwtdrive.com/BIYDvcux1.mp4"
-target="_blank"
-class="btn">
+
+download>
 
 ⬇ Download Video
 
 </a>
 
-<a
+<a class="next"
+
 href="https://cdn2.sliwtdrive.com/BIYDvcux1.mp4"
-target="_blank"
-class="btn dark">
+
+target="_blank">
 
 ▶ Video Berikutnya
 
@@ -82,49 +93,25 @@ class="btn dark">
 
 </div>
 
-<div class="telegram-banner">
+<a href="https://t.me/semuasuka001"
 
-<a
-href="https://t.me/semuasuka001"
 target="_blank">
 
 <img
-src="banner-telegram.jpg"
-alt="Telegram Banner">
+
+src="benner-telegram.jpg"
+
+class="telegram"
+
+loading="lazy"
+
+alt="telegram">
 
 </a>
 
-</div>
-
-</section>
-
 </main>
 
-<script>
-
-const searchInput=document.getElementById("searchInput");
-
-searchInput.addEventListener("keyup",function(){
-
-const value=this.value.toLowerCase();
-
-const card=document.querySelector(".video-card");
-
-const title=card.dataset.title.toLowerCase();
-
-if(title.includes(value)){
-
-card.style.display="block";
-
-}else{
-
-card.style.display="none";
-
-}
-
-});
-
-</script>
+<script src="script.js"></script>
 
 </body>
 
