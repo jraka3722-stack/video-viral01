@@ -1,44 +1,281 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
-
 <meta charset="UTF-8">
-
-<meta name="viewport"
-content="width=device-width,initial-scale=1.0">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
 
 <title>Video Viral</title>
 
-<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Poppins,sans-serif;
+}
+
+body{
+
+background:#ececec;
+
+padding:20px;
+
+}
+
+.header{
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+margin-bottom:30px;
+
+}
+
+.icon{
+
+width:52px;
+
+height:52px;
+
+background:white;
+
+border-radius:18px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+font-size:25px;
+
+box-shadow:0 3px 10px rgba(0,0,0,.1);
+
+}
+
+.profile{
+
+text-align:center;
+
+}
+
+.profile img{
+
+width:150px;
+
+height:150px;
+
+border-radius:50%;
+
+object-fit:cover;
+
+margin:auto;
+
+display:block;
+
+}
+
+h1{
+
+font-size:52px;
+
+margin-top:20px;
+
+font-weight:700;
+
+}
+
+.desc{
+
+font-size:22px;
+
+margin-top:10px;
+
+line-height:1.5;
+
+color:#222;
+
+}
+
+.search{
+
+margin:30px 0;
+
+}
+
+.search input{
+
+width:100%;
+
+padding:18px;
+
+border:none;
+
+border-radius:20px;
+
+font-size:18px;
+
+outline:none;
+
+}
+
+.list{
+
+display:flex;
+
+flex-direction:column;
+
+gap:18px;
+
+}
+
+.card{
+
+background:white;
+
+padding:25px;
+
+border-radius:18px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+text-decoration:none;
+
+color:black;
+
+font-size:24px;
+
+font-weight:500;
+
+box-shadow:0 2px 10px rgba(0,0,0,.08);
+
+transition:.2s;
+
+}
+
+.card:hover{
+
+transform:scale(1.02);
+
+}
+
+.more{
+
+font-size:30px;
+
+color:#888;
+
+}
+
+</style>
 
 </head>
 
 <body>
 
-<header>
+<div class="header">
 
-<div class="logo">
+<div class="icon">✱</div>
 
-Video Viral
+<div class="icon">⤴</div>
 
 </div>
 
-<input
-id="search"
-type="text"
-placeholder="Search video...">
+<div class="profile">
 
-</header>
+<img src="https://picsum.photos/300" alt="profile">
 
-<main id="videoList">
+<h1>@VideoViral</h1>
 
-</main>
+<div class="desc">
 
-<script src="script.js"></script>
+Update setiap hari<br>
+
+Klik judul untuk membuka halaman video
+
+</div>
+
+</div>
+
+<div class="search">
+
+<input type="text" id="search" placeholder="Cari video...">
+
+</div>
+
+<div class="list" id="list">
+
+<a class="card" href="https://example.com/video1">
+
+<span>Anak Baik Hati</span>
+
+<span class="more">⋮</span>
+
+</a>
+
+<a class="card" href="https://example.com/video2">
+
+<span>Anak ABG</span>
+
+<span class="more">⋮</span>
+
+</a>
+
+<a class="card" href="https://example.com/video3">
+
+<span>Video Viral Hari Ini</span>
+
+<span class="more">⋮</span>
+
+</a>
+
+<a class="card" href="https://example.com/video4">
+
+<span>Konten Pilihan</span>
+
+<span class="more">⋮</span>
+
+</a>
+
+</div>
+
+<script>
+
+const search=document.getElementById("search");
+
+search.addEventListener("keyup",()=>{
+
+const value=search.value.toLowerCase();
+
+document.querySelectorAll(".card").forEach(card=>{
+
+card.style.display=
+
+card.innerText.toLowerCase().includes(value)
+
+?
+
+"flex"
+
+:
+
+"none";
+
+});
+
+});
+
+</script>
 
 </body>
-
 </html>
