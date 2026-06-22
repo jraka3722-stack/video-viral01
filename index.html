@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="id">
-
 <head>
 
 <meta charset="UTF-8">
@@ -15,6 +14,8 @@
 
 <link rel="stylesheet" href="style.css">
 
+<link rel="preload" as="image" href="thumbnail.webp">
+
 </head>
 
 <body>
@@ -23,7 +24,11 @@
 
 <div class="logo">
 
-▶ websiteku
+<div class="playicon">▶</div>
+
+<div class="logotext">
+websiteku
+</div>
 
 </div>
 
@@ -32,7 +37,8 @@
 <input
 id="searchInput"
 type="text"
-placeholder="Cari video...">
+placeholder="Cari video..."
+>
 
 </div>
 
@@ -40,71 +46,73 @@ placeholder="Cari video...">
 
 <main class="container">
 
-<h2 class="title">
+<section>
+
+<h1 class="title">
 
 🔥 Video Viral Terbaru
 
-</h2>
+</h1>
 
-<div class="video-card">
+<div class="card">
 
 <a
-
 href="https://cdn2.sliwtdrive.com/BIYDvcux1.mp4"
-
 target="_blank"
-
-class="video-link">
-
-<div class="thumbnail-box">
+class="video-link"
+>
 
 <img
 
-src="thumbnail.jpg"
+src="thumbnail.webp"
+
+loading="eager"
+
+fetchpriority="high"
+
+decoding="async"
 
 class="thumbnail"
 
 alt="Thumbnail Video"
 
-loading="eager"
+>
 
-fetchpriority="high">
-
-<div class="play">
+<div class="playbutton">
 
 ▶
 
 </div>
 
-</div>
-
 </a>
 
-<div class="button-group">
+<div class="buttons">
 
 <a
 
-class="download-btn"
-
 href="https://cdn2.sliwtdrive.com/BIYDvcux1.mp4"
 
-download>
+download
+
+class="download"
+
+>
 
 ⬇ Download Video
 
 </a>
 
-<a
+<button
 
-class="next-btn"
+class="next"
 
-href="https://cdn2.sliwtdrive.com/BIYDvcux1.mp4"
+onclick="nextVideo()"
 
-target="_blank">
+>
 
 ▶ Video Berikutnya
 
-</a>
+</button>
 
 </div>
 
@@ -114,24 +122,31 @@ target="_blank">
 
 href="https://t.me/semuasuka001"
 
-target="_blank">
+target="_blank"
+
+class="telegram"
+
+>
 
 <img
 
-src="benner-telegram.jpg"
+src="banner-telegram.webp"
 
-class="telegram-banner"
+loading="lazy"
 
-alt="Telegram Banner"
+decoding="async"
 
-loading="lazy">
+alt="Telegram"
+
+>
 
 </a>
+
+</section>
 
 </main>
 
 <script src="script.js"></script>
 
 </body>
-
 </html>
