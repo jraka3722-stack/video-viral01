@@ -1,237 +1,184 @@
 *{
-
 margin:0;
 padding:0;
 box-sizing:border-box;
-
+font-family:'Poppins',sans-serif;
 }
 
 body{
-
 background:#03081d;
-
-font-family:Poppins,sans-serif;
-
-color:white;
-
+color:#fff;
+min-height:100vh;
 }
 
-header{
-
-padding:25px;
-
+.navbar{
+padding:20px;
+background:#050b1f;
 border-bottom:1px solid rgba(255,255,255,.08);
-
+position:sticky;
+top:0;
+z-index:100;
 }
 
 .logo{
-
 text-align:center;
-
-font-size:50px;
-
+font-size:38px;
 font-weight:800;
-
-color:#ff605b;
-
-margin-bottom:20px;
-
+color:#ff5b5b;
+margin-bottom:18px;
+letter-spacing:1px;
 }
 
 .search input{
-
 width:100%;
-
-height:60px;
-
+height:58px;
 border:none;
-
 outline:none;
-
-background:#10182e;
-
-color:white;
-
-padding:20px;
-
-font-size:18px;
-
 border-radius:18px;
-
+background:#111b34;
+padding:0 20px;
+font-size:18px;
+color:#fff;
 }
 
-main{
+.search input::placeholder{
+color:#8a94b3;
+}
 
+.container{
+max-width:700px;
+margin:auto;
 padding:20px;
-
 }
 
-h1{
-
-font-size:42px;
-
+.title{
+font-size:30px;
 font-weight:700;
-
 margin-bottom:20px;
-
 }
 
-.card{
-
-background:#08122b;
-
-padding:20px;
-
-border-radius:25px;
-
-box-shadow:0 0 30px rgba(255,70,70,.12);
-
+.video-card{
+background:#08142d;
+padding:18px;
+border-radius:24px;
+box-shadow:0 0 25px rgba(255,90,90,.15);
 }
 
-.image{
+.video-link{
+text-decoration:none;
+}
 
+.thumbnail-box{
 position:relative;
-
 overflow:hidden;
-
 border-radius:20px;
-
+aspect-ratio:16/9;
+background:#111;
 }
 
-.image img{
-
+.thumbnail{
 width:100%;
-
+height:100%;
 display:block;
-
-border-radius:20px;
-
+object-fit:cover;
 transition:.3s;
-
 }
 
-.image:hover img{
-
+.thumbnail:hover{
 transform:scale(1.05);
-
 }
 
 .play{
-
 position:absolute;
-
-left:50%;
-
 top:50%;
-
+left:50%;
 transform:translate(-50%,-50%);
-
-width:90px;
-
-height:90px;
-
-background:rgba(0,0,0,.55);
-
-display:flex;
-
-justify-content:center;
-
-align-items:center;
-
-font-size:38px;
-
+width:80px;
+height:80px;
 border-radius:50%;
-
-color:white;
-
-}
-
-.button-area{
-
+background:rgba(0,0,0,.6);
 display:flex;
+justify-content:center;
+align-items:center;
+font-size:34px;
+color:#fff;
+}
 
+.button-group{
+display:flex;
 gap:15px;
-
 margin-top:20px;
-
 }
 
-.button-area a{
-
+.download-btn,
+.next-btn{
 flex:1;
-
-text-decoration:none;
-
-text-align:center;
-
 padding:18px;
-
-font-size:18px;
-
-font-weight:600;
-
 border-radius:16px;
-
-color:white;
-
+text-align:center;
+text-decoration:none;
+font-size:18px;
+font-weight:600;
+color:#fff;
 transition:.3s;
-
 }
 
-.download{
-
-background:linear-gradient(90deg,#ff4a57,#ff744f);
-
+.download-btn{
+background:linear-gradient(90deg,#ff4d59,#ff7b52);
 }
 
-.next{
-
-background:#18193d;
-
+.next-btn{
+background:#181d42;
 }
 
-.button-area a:hover{
-
+.download-btn:hover,
+.next-btn:hover{
 transform:translateY(-3px);
-
 }
 
-.telegram{
-
+.telegram-banner{
 width:100%;
-
+max-width:450px;
 display:block;
-
-margin-top:25px;
-
+margin:25px auto;
 border-radius:20px;
-
+object-fit:cover;
+box-shadow:0 10px 20px rgba(0,0,0,.25);
+transition:.3s;
 }
 
-@media(max-width:600px){
+.telegram-banner:hover{
+transform:scale(1.02);
+}
+
+@media(max-width:700px){
 
 .logo{
-
-font-size:34px;
-
+font-size:30px;
 }
 
-h1{
-
-font-size:26px;
-
+.title{
+font-size:24px;
 }
 
-.button-area{
-
+.button-group{
 flex-direction:column;
-
 }
 
-.button-area a{
-
+.download-btn,
+.next-btn{
 font-size:16px;
+padding:16px;
+}
 
+.play{
+width:65px;
+height:65px;
+font-size:28px;
+}
+
+.telegram-banner{
+max-width:100%;
 }
 
 }
