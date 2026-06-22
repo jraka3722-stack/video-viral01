@@ -1,431 +1,236 @@
-/* ===========================
-   RESET
-=========================== */
-
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:'Poppins',sans-serif;
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+
 }
 
 body{
-    background:#040815;
-    color:#ffffff;
-    min-height:100vh;
+
+background:#03081d;
+
+font-family:Poppins,sans-serif;
+
+color:white;
+
 }
 
-/* ===========================
-   NAVBAR
-=========================== */
+header{
 
-.navbar{
+padding:25px;
 
-    position:sticky;
-    top:0;
-
-    z-index:999;
-
-    display:flex;
-    flex-direction:column;
-
-    align-items:center;
-
-    padding:20px;
-
-    background:#040815;
-
-    border-bottom:1px solid rgba(255,255,255,.08);
+border-bottom:1px solid rgba(255,255,255,.08);
 
 }
 
 .logo{
 
-    font-size:34px;
+text-align:center;
 
-    font-weight:700;
+font-size:50px;
 
-    color:#ff5c5c;
+font-weight:800;
 
-    margin-bottom:20px;
+color:#ff605b;
 
-    letter-spacing:1px;
-
-}
-
-/* ===========================
-   SEARCH
-=========================== */
-
-.search-box{
-
-    width:100%;
-
-    max-width:700px;
+margin-bottom:20px;
 
 }
 
-.search-box input{
+.search input{
 
-    width:100%;
+width:100%;
 
-    padding:18px;
+height:60px;
 
-    border:none;
+border:none;
 
-    border-radius:18px;
+outline:none;
 
-    outline:none;
+background:#10182e;
 
-    background:#10172d;
+color:white;
 
-    color:#ffffff;
+padding:20px;
 
-    font-size:18px;
+font-size:18px;
 
-}
-
-.search-box input::placeholder{
-
-    color:#8f94a8;
+border-radius:18px;
 
 }
-
-/* ===========================
-   CONTENT
-=========================== */
 
 main{
 
-    width:100%;
+padding:20px;
 
 }
 
-.hero{
+h1{
 
-    max-width:900px;
+font-size:42px;
 
-    margin:auto;
+font-weight:700;
 
-    padding:20px;
-
-}
-
-/* ===========================
-   TITLE
-=========================== */
-
-.title{
-
-    font-size:32px;
-
-    font-weight:700;
-
-    margin-bottom:20px;
+margin-bottom:20px;
 
 }
 
-/* ===========================
-   VIDEO CARD
-=========================== */
+.card{
 
-.video-card{
+background:#08122b;
 
-    background:#0c1226;
+padding:20px;
 
-    padding:18px;
+border-radius:25px;
 
-    border-radius:25px;
-
-    box-shadow:0 0 40px rgba(255,70,70,.12);
+box-shadow:0 0 30px rgba(255,70,70,.12);
 
 }
 
-/* ===========================
-   THUMBNAIL
-=========================== */
+.image{
 
-.video-link{
+position:relative;
 
-    position:relative;
+overflow:hidden;
 
-    display:block;
+border-radius:20px;
 
 }
 
-.thumbnail{
+.image img{
 
-    width:100%;
+width:100%;
 
-    height:420px;
+display:block;
 
-    object-fit:cover;
+border-radius:20px;
 
-    border-radius:20px;
-
-    display:block;
+transition:.3s;
 
 }
 
-/* ===========================
-   PLAY BUTTON
-=========================== */
+.image:hover img{
 
-.play-button{
-
-    position:absolute;
-
-    top:50%;
-
-    left:50%;
-
-    transform:translate(-50%,-50%);
-
-    width:80px;
-
-    height:80px;
-
-    border-radius:50%;
-
-    background:rgba(0,0,0,.45);
-
-    backdrop-filter:blur(5px);
-
-    display:flex;
-
-    justify-content:center;
-
-    align-items:center;
-
-    color:white;
-
-    font-size:36px;
-
-    transition:.3s;
+transform:scale(1.05);
 
 }
 
-.video-link:hover .play-button{
+.play{
 
-    transform:translate(-50%,-50%) scale(1.08);
+position:absolute;
 
-}
+left:50%;
 
-/* ===========================
-   BUTTON GROUP
-=========================== */
+top:50%;
 
-.btn-group{
+transform:translate(-50%,-50%);
 
-    display:flex;
+width:90px;
 
-    gap:15px;
+height:90px;
 
-    margin-top:18px;
+background:rgba(0,0,0,.55);
 
-}
+display:flex;
 
-.btn{
+justify-content:center;
 
-    flex:1;
+align-items:center;
 
-    text-decoration:none;
+font-size:38px;
 
-    text-align:center;
+border-radius:50%;
 
-    padding:18px;
-
-    border-radius:18px;
-
-    background:linear-gradient(90deg,#ff4e50,#ff7854);
-
-    color:white;
-
-    font-weight:600;
-
-    font-size:18px;
-
-    transition:.3s;
+color:white;
 
 }
 
-.btn:hover{
+.button-area{
 
-    transform:translateY(-2px);
+display:flex;
 
-}
+gap:15px;
 
-.dark{
-
-    background:#171d39;
+margin-top:20px;
 
 }
 
-/* ===========================
-   TELEGRAM BANNER
-=========================== */
+.button-area a{
 
-.telegram-banner{
+flex:1;
 
-    margin-top:25px;
+text-decoration:none;
 
-}
+text-align:center;
 
-.telegram-banner{
+padding:18px;
 
-    margin-top:25px;
+font-size:18px;
 
-    width:100%;
+font-weight:600;
 
-}
+border-radius:16px;
 
-.telegram-banner a{
+color:white;
 
-    display:block;
-
-    text-decoration:none;
+transition:.3s;
 
 }
 
-.telegram-banner img{
+.download{
 
-    width:100%;
-
-    display:block;
-
-    border-radius:22px;
-
-    object-fit:cover;
-
-    box-shadow:0 8px 25px rgba(0,0,0,.25);
-
-    transition:.3s;
+background:linear-gradient(90deg,#ff4a57,#ff744f);
 
 }
 
-.telegram-banner img:hover{
+.next{
 
-    transform:scale(1.02);
-
-}
-
-@media(max-width:768px){
-
-.telegram-banner img{
-
-    border-radius:18px;
+background:#18193d;
 
 }
 
-}
+.button-area a:hover{
 
-/* ===========================
-   PAGINATION
-=========================== */
-
-.pagination{
-
-    display:flex;
-
-    gap:12px;
-
-    margin-bottom:20px;
-
-    flex-wrap:wrap;
+transform:translateY(-3px);
 
 }
 
-.pagination button{
+.telegram{
 
-    width:60px;
+width:100%;
 
-    height:60px;
+display:block;
 
-    border:none;
+margin-top:25px;
 
-    border-radius:16px;
-
-    background:#171d39;
-
-    color:white;
-
-    font-size:20px;
-
-    cursor:pointer;
+border-radius:20px;
 
 }
 
-.pagination button.active{
-
-    background:#ff5c5c;
-
-}
-
-.next-video{
-
-    width:auto !important;
-
-    padding:0 28px;
-
-}
-
-/* ===========================
-   MOBILE
-=========================== */
-
-@media(max-width:768px){
+@media(max-width:600px){
 
 .logo{
 
-    font-size:28px;
+font-size:34px;
 
 }
 
-.title{
+h1{
 
-    font-size:24px;
-
-}
-
-.thumbnail{
-
-    height:260px;
+font-size:26px;
 
 }
 
-.telegram-banner img{
+.button-area{
 
-    height:150px;
-
-}
-
-.btn-group{
-
-    flex-direction:row;
+flex-direction:column;
 
 }
 
-.btn{
+.button-area a{
 
-    font-size:16px;
-
-    padding:15px;
-
-}
-
-.search-box input{
-
-    padding:15px;
-
-}
-
-.pagination button{
-
-    width:50px;
-
-    height:50px;
-
-    font-size:16px;
+font-size:16px;
 
 }
 
