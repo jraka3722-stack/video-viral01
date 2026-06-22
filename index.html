@@ -1,44 +1,56 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>websiteku</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
 <header class="navbar">
-    <div class="logo">
-        websiteku
-    </div>
 
-    <div class="search-box">
-        <input
-            type="text"
-            id="searchInput"
-            placeholder="Cari video..."
-        >
-    </div>
+<div class="logo">
+▶ websiteku
+</div>
+
+<div class="search-box">
+<input
+type="text"
+id="searchInput"
+placeholder="Cari video...">
+</div>
+
 </header>
 
 <main>
 
 <section class="hero">
 
+<h2 class="title">
+🔥 Video Viral Terbaru
+</h2>
+
 <div class="video-card" data-title="Video Viral Terbaru">
 
-<a href="https://cdn2.sliwtdrive.com/BIYDvcux1.mp4" target="_blank">
+<a
+href="https://cdn2.sliwtdrive.com/BIYDvcux1.mp4"
+target="_blank"
+class="video-link">
 
 <img
 class="thumbnail"
 src="thumbnail.jpg"
-alt="thumbnail">
+alt="Thumbnail Video">
 
 <div class="play-button">
 ▶
@@ -47,9 +59,40 @@ alt="thumbnail">
 </a>
 
 <div class="btn-group">
-<button onclick="downloadVideo()">Download Video</button>
-<button onclick="playAgain()">Putar Ulang</button>
+
+<a
+href="https://cdn2.sliwtdrive.com/BIYDvcux1.mp4"
+target="_blank"
+class="btn">
+
+⬇ Download Video
+
+</a>
+
+<a
+href="https://cdn2.sliwtdrive.com/BIYDvcux1.mp4"
+target="_blank"
+class="btn dark">
+
+▶ Video Berikutnya
+
+</a>
+
 </div>
+
+</div>
+
+<div class="telegram-banner">
+
+<a
+href="https://t.me/semuasuka001"
+target="_blank">
+
+<img
+src="banner-telegram.jpg"
+alt="Telegram Banner">
+
+</a>
 
 </div>
 
@@ -57,7 +100,32 @@ alt="thumbnail">
 
 </main>
 
-<script src="script.js"></script>
+<script>
+
+const searchInput=document.getElementById("searchInput");
+
+searchInput.addEventListener("keyup",function(){
+
+const value=this.value.toLowerCase();
+
+const card=document.querySelector(".video-card");
+
+const title=card.dataset.title.toLowerCase();
+
+if(title.includes(value)){
+
+card.style.display="block";
+
+}else{
+
+card.style.display="none";
+
+}
+
+});
+
+</script>
 
 </body>
+
 </html>
