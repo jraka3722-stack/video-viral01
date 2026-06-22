@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
 
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>websiteku</title>
 
@@ -12,16 +13,13 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-<link rel="preload" href="thumbnail.jpg" as="image">
-<link rel="preload" href="benner-telegram.jpg" as="image">
-
 <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-<header>
+<header class="navbar">
 
 <div class="logo">
 
@@ -31,30 +29,45 @@
 
 <div class="search">
 
-<input type="text" placeholder="Cari video...">
+<input
+id="searchInput"
+type="text"
+placeholder="Cari video...">
 
 </div>
 
 </header>
 
-<main>
+<main class="container">
 
-<h1>
+<h2 class="title">
 
 🔥 Video Viral Terbaru
 
-</h1>
+</h2>
 
-<div class="card">
+<div class="video-card">
 
-<a href="https://cdn2.sliwtdrive.com/BIYDvcux1.mp4" target="_blank">
+<a
 
-<div class="image">
+href="https://cdn2.sliwtdrive.com/BIYDvcux1.mp4"
+
+target="_blank"
+
+class="video-link">
+
+<div class="thumbnail-box">
 
 <img
+
 src="thumbnail.jpg"
-alt="thumbnail"
+
+class="thumbnail"
+
+alt="Thumbnail Video"
+
 loading="eager"
+
 fetchpriority="high">
 
 <div class="play">
@@ -67,9 +80,11 @@ fetchpriority="high">
 
 </a>
 
-<div class="button-area">
+<div class="button-group">
 
-<a class="download"
+<a
+
+class="download-btn"
 
 href="https://cdn2.sliwtdrive.com/BIYDvcux1.mp4"
 
@@ -79,7 +94,9 @@ download>
 
 </a>
 
-<a class="next"
+<a
+
+class="next-btn"
 
 href="https://cdn2.sliwtdrive.com/BIYDvcux1.mp4"
 
@@ -93,7 +110,9 @@ target="_blank">
 
 </div>
 
-<a href="https://t.me/semuasuka001"
+<a
+
+href="https://t.me/semuasuka001"
 
 target="_blank">
 
@@ -101,11 +120,11 @@ target="_blank">
 
 src="benner-telegram.jpg"
 
-class="telegram"
+class="telegram-banner"
 
-loading="lazy"
+alt="Telegram Banner"
 
-alt="telegram">
+loading="lazy">
 
 </a>
 
